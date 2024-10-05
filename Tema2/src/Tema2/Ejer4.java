@@ -15,8 +15,9 @@ public class Ejer4 {
 		System.out.println("Di el segundo numero.");
 		numeroDos = reader.nextInt();
 		//hacemos la operacion
-		if (numeroUno<numeroDos)
-			System.out.println(numeroUno + " , " + numeroDos);
-		} else { System.out.println(numeroDos + " , " + numeroUno);
+		if (numeroUno<numeroDos) {
+			System.out.println(numeroUno + " es menor que " + numeroDos);
+		} else { System.out.println(numeroDos + " es menor que " + numeroUno);
+		}
 	}
 }
