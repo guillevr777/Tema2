@@ -22,11 +22,11 @@ public class Ejer6 {
 	//si la  a==0
 	if (a==0) {
 		x1 = -c/b;
-			System.out.println("a");
+			System.out.println("Solo tiene un resultado");
 	} else {
 		discriminante = b*b-4*a*c;
 		if (discriminante < 0) {
-			System.out.println("a");
+			System.out.println("No tiene resultado");
 		} else {
 				x1 = (-b + Math.sqrt(discriminante)) / (2*a);
 				x2 = (-b - Math.sqrt(discriminante)) / (2*a);
@@ -34,5 +34,7 @@ public class Ejer6 {
 				System.out.println(x2);
 			}	
 		}
+	//cerramos el escaner
+	reader.close();
 	}
 }

@@ -15,10 +15,16 @@ public class Ejer9 {
 		System.out.println("jugador 2 , elige entre piedra papel o tijeras");
 		jugador2=reader.next();
 		if (jugador1.equals(jugador2)) {
-		}else if (jugador1.equals(piedra)) && jugador2.equals(tijeras)
-				||(jugador1.equals(papel)) && jugador2.equals(piedra)
-				||(jugador1.equals(tijeras)) && jugador2.equals(papel)
+			System.out.println("Es empate");
+		}else {if (jugador1.equals("piedra") && jugador2.equals("tijeras")
+				||jugador1.equals("papel") && jugador2.equals("piedra")
+				||jugador1.equals("tijeras") && jugador2.equals("papel")) {
+					System.out.println("Jugador 1 gana");
+				} else {
+					System.out.println("jugador 2 gana");
 			}
 		}
+		//cerramos el escaner
+		reader.close();
 	}
 }
