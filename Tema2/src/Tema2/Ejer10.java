@@ -10,6 +10,7 @@ public class Ejer10 {
 		int numeroUno;
 		int numeroDos;
 		int numeroTres;
+		//pedimos mediante consola usando escaner el valor de las variables
 		System.out.println("Dime el primer numero");
 		numeroUno = reader.nextInt();
 		System.out.println("Dime el segundo numero");
