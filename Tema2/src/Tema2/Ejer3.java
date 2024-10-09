@@ -16,5 +16,7 @@ public class Ejer3 {
 			System.out.println("Es un numero casi entero");
 		} else { System.out.println("Su numero no es casi cero");
 		}
+	//cerramos el escaner
+	reader.close();
 	}
 }

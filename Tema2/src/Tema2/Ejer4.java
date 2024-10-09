@@ -19,5 +19,7 @@ public class Ejer4 {
 			System.out.println(numeroUno + " es menor que " + numeroDos);
 		} else { System.out.println(numeroDos + " es menor que " + numeroUno);
 		}
+	//cerramos el escaner
+	reader.close();
 	}
 }
