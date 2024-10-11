@@ -41,5 +41,4 @@ public class Ejer3 {
 		// cerramos el escaner
 		reader.close();
 	}
-
 }
