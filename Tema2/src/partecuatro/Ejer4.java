@@ -12,43 +12,52 @@ public class Ejer4 {
 		int num;
 		int sumaUno = 0;
 		int sumaDos = 0;
-		int media;
-		int contadorUno = 0;
 		int contadorDos = 0;
 		int contadorTres = 0;
+		int contador = 0;
 		
 		//pedimos codigo por consola
 		System.out.println("Dime un numero");
 		num = reader.nextInt();
 		
 		//resolvemos con wbile
-		while (num > 0) {
+		while (contador < 10) {
 			
-			sumaUno += num;
+			contador++;
 			
-			//pedimos codigo por consola
+			//pedimos un numero por consola
 			System.out.println("Dime otro numero");
 			num = reader.nextInt();
-		
+					
 			if (num < 0) {
 			
-			sumaUno += num;
+			sumaDos += num;
 			contadorDos++;
 			
-			//pedimos codigo por consola
-			System.out.println("Dime otro numero");
-			num = reader.nextInt();
 		} else if  (num == 0) {
 	
 			contadorTres++;
-	
-			//pedimos codigo por consola
-			System.out.println("Dime otro numero");
-			num = reader.nextInt();
+			
+		} else if (num > 0) {
+			
+			sumaUno += num;
+			
 			}
 		}
-		//respondemos las preguntas
-		System.out.println("Han salido " +contadorTres + " ceros , la media de numeros negativos dio " +  sumaUno/contadorDos + " y la suma de los numeros positivos da " + suma);
+		
+		 // Mostramos los resultados
+		
+		System.out.println("La suma de los números positivos es: " + sumaUno);
+		
+        System.out.println("Han salido " + contadorTres + " ceros.");
+
+        if (contadorDos > 0) {
+            System.out.println("La media de los números negativos es: " + sumaDos/contadorDos);
+        } else {
+            System.out.println("No se ingresaron números negativos");
+        }
+
+		
 	//cerramos el escaner
 	reader.close();
 	}
