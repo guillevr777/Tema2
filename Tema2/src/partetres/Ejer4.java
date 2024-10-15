@@ -15,6 +15,7 @@ public class Ejer4 {
 		//creamos las variables
 		int numero;
 		int unidades;
+		int decenas;
 		
 		//cadena guardar resultado
 		String resul = "";
@@ -35,17 +36,26 @@ public class Ejer4 {
 				
 				switch (unidades) {
 				case 1 -> resul = "uno";
-				case 1 -> resul = "uno";
-				case 1 -> resul = "uno";
-				case 1 -> resul = "uno";
+				case 2 -> resul = "dos";
+				case 3 -> resul = "tres";
+				case 4 -> resul = "cuatro";
+				case 5 -> resul = "cinco";
+				case 6 -> resul = "seis";
+				case 7 -> resul = "siete";
+				case 8 -> resul = "ocho";
+				case 9 -> resul = "nueve";
 				}
 				
 				switch (decenas) {
 				case 1: resul = "dieci" + resul;
 				case 1: resul = "veinti" + resul;
-				case 1: resul = "treinta y" + resul;
-				case 1: resul = "uno";
-				case 1: resul = "uno";
+				case 1: resul = "treinta y " + resul;
+				case 1: resul = "cuarenta y " + resul;
+				case 1: resul = "cincuenta y " + resul;
+				case 1: resul = "sesenta y " + resul;
+				case 1: resul = "setenta y " + resul;
+				case 1: resul = "ochenta y " + resul;
+				case 1: resul = "noventa y " + resul;
 				}
 			}
 
