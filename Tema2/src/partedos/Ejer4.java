@@ -12,13 +12,14 @@ public class Ejer4 {
 		int numeroUno;
 		int numeroDos;
 		int resultado;
-		//preguntamos por un numero = UNO : 1
-		System.out.println("Dime que numero te ha tocado en el dado");
-		tirada1 = reader.next();
-		//preguntamos por el segundo numero que le ha salido
-		System.out.println("Dime el segundo numero que te haya tocado");
-		tirada2 = reader.next();		
-		//resolvemos el problema
+				
+		do {
+			System.out.println("Dime que numero te ha tocado en el dado con letra");
+			tirada1 = reader.next().toUpperCase();
+			//preguntamos por el segundo numero que le ha salido
+			System.out.println("Dime el segundo numero que te haya tocado con letras");
+			tirada2 = reader.next().toUpperCase();
+			
 		numeroUno = switch (tirada1)	{
 				case "UNO" -> {
 					yield 1;
@@ -68,6 +69,8 @@ public class Ejer4 {
 				yield -1;
 			}
 		};
+		} while (numeroUno == -1 || numeroDos == -1);
+		
 		resultado = numeroUno + numeroDos;
 		System.out.println("Tus numeros sumados dan : " + resultado);
 	//cerramos el escaner
