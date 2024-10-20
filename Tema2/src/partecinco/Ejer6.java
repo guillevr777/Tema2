@@ -3,38 +3,41 @@ package partecinco;
 import java.util.Scanner;
 
 public class Ejer6 {
-
-	public static void main(String[] args) {
+	public static void main(String[]args) {
 		
-		//creamos el escaner
-		 Scanner reader = new Scanner(System.in);
-		 
-		 //creamos las variables
-	      String respuestaUno;
-	      String respuestaDos;
-	    
-	      //creamos el do while
-	      do {
-	    	//preguntamos 
-		      System.out.println("Jugador 1 tiene que elegir piedra papel o tijera");
-		      respuestaUno = reader.next();
-		      System.out.println("Jugador 1 tiene que elegir piedra papel o tijera");
-		      respuestaDos = reader.next();
-	            if (respuestaUno.equals(respuestaDos)) {
-	                System.out.println("Es empate");
-	            } else if (ganaJugadorUno(respuestaUno, respuestaDos)) {
-	                System.out.println("Gana jugador 1");
-	            } else {
-	                System.out.println("Gana jugador 2");
-	            }
-	        } while (!respuestaUno.equals(respuestaDos));
-	        
-	  // Cerrar el escaner
-	   reader.close();
-		}
-		private static boolean ganaJugadorUno(String jugadorUno, String jugadorDos) {
-		return (jugadorUno.equals("piedra") && jugadorDos.equals("tijeras")) ||
-	           (jugadorUno.equals("papel") && jugadorDos.equals("piedra")) ||
-	           (jugadorUno.equals("tijeras") && jugadorDos.equals("papel"));	
+		//creamos la consola
+		Scanner reader = new Scanner(System.in);
+
+		//creamos las variables
+		String jugador1;
+		String jugador2;
+		String continuar;
+		//creamos do while
+		do {
+		System.out.println("jugador 1 , elige entre piedra papel o tijeras");
+		jugador1 = reader.next().toLowerCase();
+		System.out.println("jugador 2 , elige entre piedra papel o tijeras");
+		jugador2 = reader.next().toLowerCase();
+		
+		 if (jugador1.equals(jugador2)) {
+             System.out.println("Es empate");
+         } else if (jugador1.equals("piedra") && jugador2.equals("tijeras") ||
+                    jugador1.equals("papel") && jugador2.equals("piedra") ||
+                    jugador1.equals("tijeras") && jugador2.equals("papel")) {
+             System.out.println("Jugador 1 gana");
+         } else if (jugador2.equals("piedra") && jugador1.equals("tijeras") ||
+                 jugador2.equals("papel") && jugador1.equals("piedra") ||
+                 jugador2.equals("tijeras") && jugador1.equals("papel")) {
+             System.out.println("Jugador 2 gana");
+         } else {
+             System.out.println("Opcion no valida");
+         }
+			System.out.println("Quieres jugar otra vez?S/N");
+			continuar = reader.next().toUpperCase();
+			
+		} while (continuar.equals("S"));
+		
+		//cerramos el escaner
+		reader.close();
 	}
 }
