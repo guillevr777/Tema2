@@ -8,11 +8,12 @@ public class Ejer6 {
 		//creamos la consola
 		Scanner reader = new Scanner(System.in);
 
-		//creamos las variables
+		//creamos las variables para almacenar las elecciones de los dos jugadores y la opcion de continuar la partida
 		String jugador1;
 		String jugador2;
 		String continuar;
-		//creamos do while
+		
+		//creamos do while donde le preguntaremos por sus elecciones y se decidira con if else si es uno o otro ganador o ninguno o continuar
 		do {
 		System.out.println("jugador 1 , elige entre piedra papel o tijeras");
 		jugador1 = reader.next().toLowerCase();

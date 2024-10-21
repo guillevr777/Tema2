@@ -9,15 +9,15 @@ public class Ejer3 {
 		//ceamos el escaner
 		Scanner reader = new Scanner(System.in);
 	
-		//creamos la variable 
+		//creamos la variable numero para almacenar el numnero recogido por escaner y contador que almacenara el numero de veces que se ha repetido el bucle
 		int numero;
 		int contador = 0;
 		
-		//tell me the number pls
+		//Pedimos el numero por escaner para almacenarlo en numero
 		System.out.println("Dime el numero");
 		numero = reader.nextInt();
 		
-		//hacemos do while
+		//hacemos do while que ira sumando 1 al contador y elegira segun sea contador == numero o else
 		do { contador++;
 			if (contador == numero) {
 				

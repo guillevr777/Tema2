@@ -8,15 +8,15 @@ public class Ejer4 {
 		//ceamos el escaner
 		Scanner reader = new Scanner(System.in);
 			
-		//creamos la variable 
+		//creamos la variable que contendra los valores 
 		int numero;
 		int contador = 1;
 				
-		//tell me the number pls
+		//pedimos el numero por consola
 		System.out.println("Dime el numero");
 		numero = reader.nextInt();
 				
-		//hacemos do while
+		//hacemos do while para mostras la tabla de multiplicar hasta que llegue a 10 bucles
 		do { System.out.println(numero + " x " + contador + " = " + (numero*contador));
 			contador++;
 		} while (contador <= 10);

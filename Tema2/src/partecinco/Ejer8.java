@@ -6,19 +6,18 @@ public class Ejer8 {
 
 	public static void main(String[] args) {
 		
-				// creamos el escaner
+						// creamos el escaner
 						Scanner reader = new Scanner(System.in);
 						// creamos las variables para almacenar los numeros
 						int numeroUno;
 						int numeroDos;
 						//creamos la variable para almacenar la letra que elegiran
 						String letra;
-						// preguntamos por dos numeros
+					
+					do {
 						System.out.println("Dime dos numeros uno despues del otro");
 						numeroUno = reader.nextInt();
 						numeroDos = reader.nextInt();
-					
-					do {
 						System.out.println("A. Sumar los numeros");
 						System.out.println("B. Restar los numeros");
 						System.out.println("C. Multiplicar los numeros");
