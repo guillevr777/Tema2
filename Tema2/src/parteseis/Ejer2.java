@@ -16,11 +16,10 @@ public static void main(String[] args) {
 		numero = reader.nextInt();
 		
 		//hacemos el for
-		for (int numeroDos = 0 ; numeroDos<=numero ; numeroDos++ ) {
+		for (int numeroDos = 0 ; numeroDos<=numero ; numeroDos += 3 ) {
 			System.out.print(numeroDos + " ; ");
 		}
 	//cerramos el escaner
 	reader.close();
 	}
-}
 }
