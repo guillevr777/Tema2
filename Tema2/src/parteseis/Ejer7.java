@@ -8,18 +8,33 @@ public class Ejer7 {
 		//creamos la consola
 				Scanner reader = new Scanner(System.in);
 				
-				//hacemos el for para que cuente hasta que llegue al 20 y vaya sumando 1 al contador cada vez
-				for ( int contador = 1 , numero ; 1 >= contador ; contador++) {
+				//Declaramos las variables nummero para almacenar el valor y contador para el numero de veces que entre en el if
+				int numero;
+				int contador = 0;
+				
+				//preguntamos por un numero entero positivo
+				System.out.println("Dime un numero entero positivo");
+				numero = reader.nextInt();
+				
+				//comprobamos que el numero no sea 1 o menor
+				if (numero <= 1) {
+		            System.out.println("El número " + numero + " no es primo.");
+		        } else {
+		        	
+				//hacemos el for para averiguar si el numero es divisible solo por 1 y el mismo
+				for ( int i = 2 ; i < numero ; i++) {
 					
-					//preguntamos a la profe por un numero que se convertira en factorial
-					System.out.println("Dime un numero y te digo si es divisible por 1 o por si mismo");
-					numero = reader.nextInt();
-					
-					if (numero%1 == 0 && numero%numero == 0) {
-					
-					System.out.println("El numero " + numero + " es primo");
-					
-			}
+					//si es divisible por i , incrementamos el contador 
+					if (numero%i == 0) {
+						contador++;	
+						}
+					}
+		        }
+				//si no se encuentran divisores el numero es primo
+				if (contador == 0) {
+				System.out.println("El numero " + numero + " es primo");
+				} else { 
+				System.out.println("El numero no es primo.");
 		}
 	//cerramos el escaner
 	reader.close();
