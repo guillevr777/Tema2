@@ -33,31 +33,27 @@ public class Ejer1 {
 		//pedimos al usuario por escaner que diga el numero de segundos que quiere sumar a la hora
 		System.out.println("Dime los segundos que quieres sumarle");
 		masTiempo = reader.nextInt();
-
-		int segundos1 = segundos;
-		int minutos1 = minutos;
-		int horas1 = horas;
 	
-		for (int i = 1 ; masTiempo <= i ; i++) {
+		for (int i = 0 ; masTiempo > i ; i++) {
 		
-			segundos1 += i;
-			
-		if (horas1 < 0 || horas1 > 23 || minutos1 < 0 || minutos1 > 59 || segundos1 < 0 || segundos1 > 59) {
-			System.out.println("La hora introducida no es real");
-			} else { segundos1++;
-				if	(segundos1 == 60) {
-					segundos1 = 0;
-					minutos1++;
-				}if (minutos1 == 60) {
-					minutos1 = 0;
-					horas1++;
-				}if (horas1 == 24) {
-					horas1 = 0;
-				}
+			segundos ++;
+						
+				if	(segundos == 60) {
+					segundos = 0;
+					minutos++;
+					
+				}if (minutos == 60) {
+					minutos = 0;
+					horas++;
+					
+				}if (horas == 24) {
+					horas = 0;
 			}
 		}
+		
+		System.out.println("La hora sera : " + horas + " : " + minutos + " : " + segundos);
+		
 	//cerramos el escaner
 	reader.close();
 	}
-
 }
