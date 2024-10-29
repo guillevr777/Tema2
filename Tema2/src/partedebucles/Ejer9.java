@@ -10,14 +10,25 @@ public class Ejer9 {
 		Scanner reader = new Scanner(System.in);
 		
 		//creamos la variable que guardara el numero
-		int numero;
+		int numero = 0;
 		
 		//variable que guarda el nuevo numero que se haya introducido en el while
 		int contador = 0;
 		
-		//pedimos el numero que se quiere comprobar
-		System.out.println("Dime un numero");
-		numero = reader.nextInt();
+		try {
+			
+			//pedimos el numero que se quiere comprobar
+			System.out.println("Dime un numero entre 0 y 20");
+			numero = reader.nextInt();
+			
+			assert numero <= 0 : "Error : Numero igual o menor que cero";
+			
+			} catch (Error e) {
+				System.out.println(e.getMessage());
+			} finally {
+				System.out.println();
+			}
+			
 		
 		//creamos el while para que se repita todas las veces que se pueda dividir por 10 y se suma 1 al contador 
 		while (numero > 0) {

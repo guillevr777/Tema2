@@ -12,7 +12,7 @@ public class Ejer8 {
 		int numero;
 		
 		//variable que guarda el nuevo numero que se haya introducido en el while
-		int numerosSiguientes;
+		int numerosSiguientes = 0;
 		
 		//contador de fallos del else
 		int fallos = 0;
@@ -24,18 +24,16 @@ public class Ejer8 {
 		boolean salir = true;
 		String respuesta;
 		
-		//pedimos el numero que se quiere comprobar
-		System.out.print("Dime un numero inical :");
-		numero = reader.nextInt();
-		
 		//creamos el while para que se repita hasta que el usuario introduzca 0
 		while (salir) {
 			
-			System.out.print("Dime otro numero :");
-			numerosSiguientes = reader.nextInt();
+			//pedimos el numero que se quiere comprobar
+			System.out.print("Dime un numero :");
+			numero = reader.nextInt();
+			
 			cantidadNumeros++;
 			
-			if (numero > numerosSiguientes) {
+			if (numero < numerosSiguientes) {
 				System.out.println("El numero introducido no es mayor que el anterior");
 				fallos++;
 				
@@ -45,6 +43,7 @@ public class Ejer8 {
 					salir = false;
 				}
 			}
+			numerosSiguientes = numero;
 		}
 		
 		System.out.println("Numero de fallos : " + fallos);

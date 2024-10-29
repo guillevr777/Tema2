@@ -9,11 +9,21 @@ public class Ejer5 {
 		Scanner reader = new Scanner(System.in);
 		
 		//creamos la variable que guardara el numero
-		int numero;
-				
+		int numero = 0;
+		
+		try {
+			
 		//pedimos el numero que se quiere comprobar
 		System.out.println("Dime un numero entre 0 y 20");
 		numero = reader.nextInt();
+		
+		assert numero < 0 && numero > 20 : "Error : The number need to be between 0 and 20.";
+		
+		} catch (ArithmeticException e) {
+			System.out.println(e.getMessage());
+		} finally {
+			System.out.println();
+		}
 		
 		//creamos el for , uno funcionara como fila y otro como columnas
 		for (int i = 1; i <= numero ; i++) {
