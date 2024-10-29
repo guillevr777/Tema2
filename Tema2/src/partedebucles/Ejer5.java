@@ -22,7 +22,7 @@ public class Ejer5 {
 		} catch (ArithmeticException e) {
 			System.out.println(e.getMessage());
 		} finally {
-			System.out.println();
+			System.out.println("Error : Poner numero mayor o igual que cero");
 		}
 		
 		//creamos el for , uno funcionara como fila y otro como columnas

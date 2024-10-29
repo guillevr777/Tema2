@@ -26,7 +26,7 @@ public class Ejer9 {
 			} catch (Error e) {
 				System.out.println(e.getMessage());
 			} finally {
-				System.out.println();
+				System.out.println("Error : Poner mayor o igual que 0");
 			}
 			
 		

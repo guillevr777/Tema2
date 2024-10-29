@@ -7,42 +7,47 @@ public class Ejer10 {
 	public static void main(String[]args) {
 		
 		Scanner reader = new Scanner(System.in);
-		
-        int numero;
-        int digito;
-        int primerD;
-        int segundoD;
-        int tercerD;
-        int cuartoD;
-        int quintoD;
-        int sextoD;
-        
-        System.out.println("dime el numero");
-        numero = reader.nextInt();
 
-        while (numero > 0) {
+        boolean continuar = true;
+        String S;
+
+        //se repetira el do todas las veces que la persona diga si al boolean
+        do {
         	
+        	 int numero;
+             int digito;
+             int reverso = 0;
+             
+            System.out.println("dime el numero");
+            numero = reader.nextInt();
+            int copiaNumero = numero;
+        	
+        	while (numero > 0) {
             digito = numero % 10;
+            
+            reverso = reverso*10+digito;
+            
+            numero/=10;
+        	}
           
-            if (digito < 10) {
-            	primerD = digito;
-            } 
-            if (digito < 100 && digito >= 10) {
-            	segundoD = digito;
+        	//si se lee el numero igual por delante que por detras es capicua
+            if (copiaNumero == reverso) {
+            	System.out.println("Tu numero es capicua");
+            	System.out.println(copiaNumero);
+            	continuar = false;
+            	
+            } else { 
+            	System.out.println("El numero no es capicua");
+            	continuar = false;
             }
-            if (digito < 1000 && digito >= 100) {
-            	tercerD = digito;
-            }
-            if (digito < 10000 && digito >= 1000) {
-            	cuartoD = digito;
-            }
-            if (digito < 100000 && digito >= 10000) {
-            	quintoD = digito;
-            }
-            if (digito < 1000000 && digito >= 100000) {
-            	sextoD = digito;
-            }
-        } 
+            
+            //se le pregunta al usuario si quiere volver a probar un numero
+            System.out.println("Deseas volver a intentar ? S/N");
+        	S = reader.next();
+        	continuar = S.equalsIgnoreCase("S");
+            
+        } while (continuar);
+        	
         //cerramos el escaner
         reader.close();
 	}
