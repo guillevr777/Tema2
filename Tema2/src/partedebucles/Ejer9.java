@@ -21,12 +21,10 @@ public class Ejer9 {
 			System.out.println("Dime un numero entre 0 y 20");
 			numero = reader.nextInt();
 			
-			assert numero <= 0 : "Error : Numero igual o menor que cero";
+			assert numero >= 0 : "Error : Numero igual o menor que cero";
 			
 			} catch (Error e) {
 				System.out.println(e.getMessage());
-			} finally {
-				System.out.println("Error : Poner mayor o igual que 0");
 			}
 			
 		
