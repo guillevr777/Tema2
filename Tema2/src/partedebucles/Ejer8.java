@@ -1,5 +1,6 @@
 package partedebucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejer8 {
@@ -9,7 +10,7 @@ public class Ejer8 {
 		Scanner reader = new Scanner(System.in);
 		
 		//creamos la variable que guardara el numero
-		int numero;
+		int numero = 0;
 		
 		//variable que guarda el nuevo numero que se haya introducido en el while
 		int numerosSiguientes = 0;
@@ -26,13 +27,23 @@ public class Ejer8 {
 		
 		//creamos el while para que se repita hasta que el usuario introduzca 0
 		while (salir) {
-			
+			try {
 			//pedimos el numero que se quiere comprobar
-			System.out.print("Dime un numero :");
+			System.out.println("Dime un numero :");
 			numero = reader.nextInt();
-			
+			assert numero >= 0 : "Error : Numero inferior a 0";
+			} catch (ArithmeticException e) {
+				System.err.println(e.getMessage());
+			} catch (InputMismatchException e) {
+				System.err.println(e.getMessage());
+			}
+				finally {
+				reader.nextLine();
+			}
+			reader.nextLine();
+
 			cantidadNumeros++;
-			
+		 	
 			if (numero < numerosSiguientes) {
 				System.out.println("El numero introducido no es mayor que el anterior");
 				fallos++;
@@ -44,6 +55,7 @@ public class Ejer8 {
 				}
 			}
 			numerosSiguientes = numero;
+			
 		}
 		
 		System.out.println("Numero de fallos : " + fallos);
