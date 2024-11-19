@@ -18,7 +18,6 @@ public class Ejer7 {
 		
 		//creamos el for , uno funcionara como fila y otros dos como columnas
 		for (int i = 1; i <= numero ; i++) {
-            System.out.println();
 
             for (int x = 1 ; x <= i ; x++) {
             	System.out.print(x);
@@ -27,6 +26,7 @@ public class Ejer7 {
             for (int a = i -1 ; a >= 1 ; a--) {
             	System.out.print(a);
             }
+            System.out.println();
         }
 		
 		//cerramos el escaner

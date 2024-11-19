@@ -3,52 +3,34 @@ package pruebas;
 import java.util.Scanner;
 
 public class Problema4EjerciciosExamen2Intento {
-	    public static void main(String[] args) {
-	    	 Scanner reader = new Scanner(System.in);
+	 public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+	        System.out.print("Introduce el tamaño del escaque: ");
+	        int tamañoEscaque = scanner.nextInt();
+	        
+	        // Tamaño total del tablero (8x8)
+	        int tamañoTablero = 8;
 
-	         System.out.println("Dime un número entero positivo (lado del hexágono):");
-	         int lado = reader.nextInt();
+	        // Dibuja el tablero de ajedrez
+	        for (int fila = 0; fila < tamañoTablero; fila++) {
+	            for (int i = 0; i < tamañoEscaque; i++) { // Dibuja cada escaque verticalmente
+	                for (int columna = 0; columna < tamañoTablero; columna++) {
+	                    if ((fila + columna) % 2 == 0) {
+	                        // Escaque claro (espacio)
+	                        for (int j = 0; j < tamañoEscaque; j++) {
+	                            System.out.print(" ");
+	                        }
+	                    } else {
+	                        // Escaque oscuro (##)
+	                        for (int j = 0; j < tamañoEscaque; j++) {
+	                            System.out.print("#");
+	                        }
+	                    }
+	                }
+	                System.out.println(); // Nueva línea después de cada fila de escaques
+	            }
+	        }
 
-	         // Parte superior del hexágono
-	         for (int i = 0; i < lado; i++) {
-	             // Espacios a la izquierda
-	             for (int j = 0; j < lado - i - 1; j++) {
-	                 System.out.print(" ");
-	             }
-	             // Asteriscos
-	             System.out.print("*");
-	             for (int j = 0; j < (i * 2); j++) {
-	                 System.out.print(" ");
-	             }
-	             if (i > 0) {
-	                 System.out.print("*");
-	             }
-	             System.out.println();
-	         }
-
-	         // Parte media del hexágono (lado plano)
-	         for (int i = 0; i < lado * 2; i++) {
-	             System.out.print("*");
-	         }
-	         System.out.println();
-
-	         // Parte inferior del hexágono
-	         for (int i = lado - 1; i >= 0; i--) {
-	             // Espacios a la izquierda
-	             for (int j = 0; j < lado - i - 1; j++) {
-	                 System.out.print(" ");
-	             }
-	             // Asteriscos
-	             System.out.print("*");
-	             for (int j = 0; j < (i * 2); j++) {
-	                 System.out.print(" ");
-	             }
-	             if (i > 0) {
-	                 System.out.print("*");
-	             }
-	             System.out.println();
-	         }
-
-	         reader.close();
-	     }
-	 }
+	        scanner.close();
+	    }
+	}

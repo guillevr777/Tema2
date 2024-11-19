@@ -17,7 +17,7 @@ public class Ejer5 {
 		System.out.println("Dime un numero entre 0 y 20");
 		numero = reader.nextInt();
 		
-		assert numero < 0 && numero > 20 : "Error : The number need to be between 0 and 20.";
+		assert numero > 0 && numero < 20 : "Error : The number need to be between 0 and 20.";
 		
 		} catch (ArithmeticException e) {
 			System.out.println(e.getMessage());
