@@ -11,7 +11,7 @@ public class Lastone {
 		
 		//creamos las variables
 		int number;
-		Random rand = new random();
+		Random rand = new Random();
 		
 		//preguntamos por un numeroç
 		System.out.println("say me a number whithout 1 and 100");
